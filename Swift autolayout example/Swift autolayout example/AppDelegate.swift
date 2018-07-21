@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let rootVC = ViewController()
-        self.window?.rootViewController = rootVC
+        self.window?.rootViewController = rootVC // Set ViewController.swift as the root view (First view that loads as we are not using Main.storyboard)
         return true
     }
 
