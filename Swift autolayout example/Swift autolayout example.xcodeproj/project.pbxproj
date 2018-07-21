@@ -10,9 +10,10 @@
 		932EE7C8B16E6B6216B57C14 /* Pods_Swift_autolayout_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A9F903CB037BC983616254 /* Pods_Swift_autolayout_example.framework */; };
 		FBD0255F210391EE0015593F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD0255E210391EE0015593F /* AppDelegate.swift */; };
 		FBD02561210391EF0015593F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD02560210391EF0015593F /* ViewController.swift */; };
-		FBD02564210391EF0015593F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBD02562210391EF0015593F /* Main.storyboard */; };
 		FBD02566210391F00015593F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBD02565210391F00015593F /* Assets.xcassets */; };
 		FBD02569210391F00015593F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBD02567210391F00015593F /* LaunchScreen.storyboard */; };
+		FBD025722103969C0015593F /* UIView+AppUIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD025712103969C0015593F /* UIView+AppUIBuilder.swift */; };
+		FBD02574210397BE0015593F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD02573210397BE0015593F /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +23,11 @@
 		FBD0255B210391EE0015593F /* Swift autolayout example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift autolayout example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBD0255E210391EE0015593F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBD02560210391EF0015593F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FBD02563210391EF0015593F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FBD02565210391F00015593F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBD02568210391F00015593F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBD0256A210391F00015593F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBD025712103969C0015593F /* UIView+AppUIBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AppUIBuilder.swift"; sourceTree = "<group>"; };
+		FBD02573210397BE0015593F /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +80,10 @@
 		FBD0255D210391EE0015593F /* Swift autolayout example */ = {
 			isa = PBXGroup;
 			children = (
-				FBD02570210394F90015593F /* Extensions */,
 				FBD0255E210391EE0015593F /* AppDelegate.swift */,
-				FBD02560210391EF0015593F /* ViewController.swift */,
-				FBD02562210391EF0015593F /* Main.storyboard */,
+				FBD02573210397BE0015593F /* AppConstants.swift */,
+				FBD02575210397CA0015593F /* Views */,
+				FBD02570210394F90015593F /* Extensions */,
 				FBD02565210391F00015593F /* Assets.xcassets */,
 				FBD02567210391F00015593F /* LaunchScreen.storyboard */,
 				FBD0256A210391F00015593F /* Info.plist */,
@@ -92,8 +94,17 @@
 		FBD02570210394F90015593F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FBD025712103969C0015593F /* UIView+AppUIBuilder.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FBD02575210397CA0015593F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FBD02560210391EF0015593F /* ViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,6 +118,7 @@
 				FBD02557210391EE0015593F /* Sources */,
 				FBD02558210391EE0015593F /* Frameworks */,
 				FBD02559210391EE0015593F /* Resources */,
+				3E29DC50B27CBE36E995BB83 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,13 +169,30 @@
 			files = (
 				FBD02569210391F00015593F /* LaunchScreen.storyboard in Resources */,
 				FBD02566210391F00015593F /* Assets.xcassets in Resources */,
-				FBD02564210391EF0015593F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3E29DC50B27CBE36E995BB83 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Swift autolayout example/Pods-Swift autolayout example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift autolayout example/Pods-Swift autolayout example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		84EC09C07567FE8F30B0237F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,21 +219,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBD02561210391EF0015593F /* ViewController.swift in Sources */,
+				FBD025722103969C0015593F /* UIView+AppUIBuilder.swift in Sources */,
 				FBD0255F210391EE0015593F /* AppDelegate.swift in Sources */,
+				FBD02574210397BE0015593F /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FBD02562210391EF0015593F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FBD02563210391EF0015593F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FBD02567210391F00015593F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
