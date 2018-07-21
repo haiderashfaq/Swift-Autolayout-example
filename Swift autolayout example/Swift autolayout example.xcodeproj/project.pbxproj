@@ -14,6 +14,7 @@
 		FBD02569210391F00015593F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBD02567210391F00015593F /* LaunchScreen.storyboard */; };
 		FBD025722103969C0015593F /* UIView+AppUIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD025712103969C0015593F /* UIView+AppUIBuilder.swift */; };
 		FBD02574210397BE0015593F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD02573210397BE0015593F /* AppConstants.swift */; };
+		FBD0257721039C820015593F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBD0257621039C810015593F /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FBD0256A210391F00015593F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBD025712103969C0015593F /* UIView+AppUIBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AppUIBuilder.swift"; sourceTree = "<group>"; };
 		FBD02573210397BE0015593F /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		FBD0257621039C810015593F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				FBD02575210397CA0015593F /* Views */,
 				FBD02570210394F90015593F /* Extensions */,
 				FBD02565210391F00015593F /* Assets.xcassets */,
+				FBD0257621039C810015593F /* Main.storyboard */,
 				FBD02567210391F00015593F /* LaunchScreen.storyboard */,
 				FBD0256A210391F00015593F /* Info.plist */,
 			);
@@ -167,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD0257721039C820015593F /* Main.storyboard in Resources */,
 				FBD02569210391F00015593F /* LaunchScreen.storyboard in Resources */,
 				FBD02566210391F00015593F /* Assets.xcassets in Resources */,
 			);
